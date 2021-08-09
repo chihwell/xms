@@ -1,0 +1,19 @@
+name: 更新kangwenhang仓库脚本
+on:
+  workflow_dispatch:
+  watch:
+    types: started
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+    - name: sync-xiaomisport
+      uses: repo-sync/github-sync@v2
+      with:
+        source_repo: "https://github.com/kangwenhang/xiaomisport.git"
+        source_branch: "main"
+        destination_branch: "main"
+        github_token: ${{ secrets.PAT }}
