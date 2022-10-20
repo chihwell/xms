@@ -13,7 +13,7 @@ jobs:
     - name: sync-xiaomisport
       uses: repo-sync/github-sync@v2
       with:
-        source_repo: "https://github.com/kangwenhang/xiaomisport.git"
+        source_repo: "https://github.com/577fkj/mimotion.git"
         source_branch: "main"
         destination_branch: "main"
         github_token: ${{ secrets.PAT }}
